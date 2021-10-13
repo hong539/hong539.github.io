@@ -76,6 +76,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Verify-signature" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/13/Verify-signature/" class="article-date">
+  <time class="dt-published" datetime="2021-10-13T10:11:21.000Z" itemprop="datePublished">2021-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/10/13/Verify-signature/">Verify signature</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>#Verify signature<br>Here I met some problems.<br>Downloads the Linux distributions ISOs and md5/sha1/sha256/sig checking_files</p>
+<p>On my laptop(W10).<br>It’s OK to do the follwing commands.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sha256sum -c put_your_checking_files 2&gt;&amp;1 | grep OK</span><br></pre></td></tr></table></figure>
+
+<p>Whatever, it’s not working when verifing my Archlinux ISO. :(</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ $ gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig</span><br></pre></td></tr></table></figure>
+<p>will show “GPG: Can’t check signature: No public key”</p>
+<p>On the other hand, the same Archlinus ISO and sig files on my old desktop(Manjaro Linux)<br>with the same command, it’s working. :)</p>
+<p>Uh…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hong539.github.io/2021/10/13/Verify-signature/" data-id="ckupd58un000014uq0uj4f7ze" data-title="Verify signature" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Linux-distributions" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/10/13/Linux-distributions/" class="article-date">
@@ -307,6 +354,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/10/13/Verify-signature/">Verify signature</a>
+          </li>
         
           <li>
             <a href="/2021/10/13/Linux-distributions/">Linux distributions</a>
