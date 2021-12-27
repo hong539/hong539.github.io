@@ -76,6 +76,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Input-method-on-kde-plasma" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/27/Input-method-on-kde-plasma/" class="article-date">
+  <time class="dt-published" datetime="2021-12-27T12:43:08.000Z" itemprop="datePublished">2021-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/27/Input-method-on-kde-plasma/">Input method on kde plasma</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Input-method-on-kde-plasma"><a href="#Input-method-on-kde-plasma" class="headerlink" title="Input method on kde plasma"></a>Input method on kde plasma</h2><p>Here I make a note to reminder me how to set up my input method on desktop(kde plams).<br>Recently I wiped my manjaro Linux becasue there was a problem that I could not handle.<br>And maybe I’ll post the probelm on another topic called “error: you need to load the kernel first”.</p>
+<p>Ok, let us start this one to setting your imput method!!!<br>prerequisites:<br>OS: Arch Linux x86_64<br>DE: Plasma 5.23.4<br>fonts:<br>install fonts form AUR</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git_url</span><br><span class="line">$ <span class="built_in">cd</span> your_fonts</span><br><span class="line">$ makepkg -s</span><br><span class="line">$ sudo pacman -U filename.pkg.tar.xz</span><br></pre></td></tr></table></figure>
+<p>git clone fonts from AUR<br>then cd to the folder<br>then type the above command to build package<br>next use pacman to install this package<br>then install will be excuted.</p>
+<p>fonts from AUR<br><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/ttf-ms-fonts/">https://aur.archlinux.org/packages/ttf-ms-fonts/</a></p>
+<p>install input framework<br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/IBus#Other_desktop_environments">https://wiki.archlinux.org/title/IBus#Other_desktop_environments</a></p>
+<p>under user(not root) to prevent kde plasma problem</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> pacman -S ibus ibus-chewing</span><br></pre></td></tr></table></figure>
+<p>Here ibus-chewing is for me to use traditional chinese.</p>
+<p>Next we have setting autostart.<br>That is when you logining your desktop and will run ibus-daemon as your input method.</p>
+<p>Search autostart.<br>Then “Add IBus Preferences”.<br>Next go the “Application”.<br>Add “ibus-daemon -drx” at the “Command”.<br>Then save and exit.<br>And logout or reboot to check this ibus panel will pop out when enter your desktop environment.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hong539.github.io/2021/12/27/Input-method-on-kde-plasma/" data-id="ckxop7myl0000iouq9gri1ed9" data-title="Input method on kde plasma" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-shell-script" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/27/shell-script/" class="article-date">
@@ -468,7 +517,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li></ul>
     </div>
   </div>
 
@@ -479,6 +528,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/12/27/Input-method-on-kde-plasma/">Input method on kde plasma</a>
+          </li>
         
           <li>
             <a href="/2021/11/27/shell-script/">shell script</a>
@@ -494,10 +547,6 @@
         
           <li>
             <a href="/2021/10/13/Verify-signature/">Verify signature</a>
-          </li>
-        
-          <li>
-            <a href="/2021/10/13/Linux-distributions/">Linux distributions</a>
           </li>
         
       </ul>
